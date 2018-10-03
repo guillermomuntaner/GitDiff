@@ -5,11 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)
 [![Platform](https://img.shields.io/cocoapods/p/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)
 
-## Example
+## Features
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+- [x] Models for git diffs, headers, hunks and lines.
+- [x] Parsing GitLab diffs.
+- [ ] Parsing standard unified diffs.
 
 ## Requirements
+
+- iOS 8.0+ / macOS 10.10+
+- Swift 3.1+
 
 ## Installation
 
@@ -19,6 +24,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'GitDiff'
 ```
+## Test
+
+To run the tests, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
