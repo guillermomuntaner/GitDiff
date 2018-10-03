@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)
 [![Platform](https://img.shields.io/cocoapods/p/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)
 
+Parse git unified diffs with Swift.
+
 ## Features
 
 - [x] Models for git diffs, headers, hunks and lines.
