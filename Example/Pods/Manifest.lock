@@ -1,0 +1,16 @@
+PODS:
+  - GitDiff (0.1.0)
+
+DEPENDENCIES:
+  - GitDiff (from `../`)
+
+EXTERNAL SOURCES:
+  GitDiff:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GitDiff: e1281dfe4a966a7893a3fc099e4ecc8e327058dd
+
+PODFILE CHECKSUM: fe31164930fe4c9e9e027feb5c56000d314fd0b7
+
+COCOAPODS: 1.6.0.beta.1

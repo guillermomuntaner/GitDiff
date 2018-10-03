@@ -1,6 +1,6 @@
 # GitDiff
 
-[![CI Status](https://img.shields.io/travis/Guillermo Muntaner/GitDiff.svg?style=flat)](https://travis-ci.org/Guillermo Muntaner/GitDiff)
+[![CI Status](https://img.shields.io/travis/guillermomuntaner/GitDiff.svg?style=flat)](https://travis-ci.org/guillermomuntaner/GitDiff)
 [![Version](https://img.shields.io/cocoapods/v/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)
 [![License](https://img.shields.io/cocoapods/l/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)
 [![Platform](https://img.shields.io/cocoapods/p/GitDiff.svg?style=flat)](https://cocoapods.org/pods/GitDiff)

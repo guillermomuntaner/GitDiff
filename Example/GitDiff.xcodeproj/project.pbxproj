@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0046B55DA54E6FBD53D29E23 /* Pods_GitDiff_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB2F983C46BCB65AE7BB0C6 /* Pods_GitDiff_Tests.framework */; };
-		ED83F68F20348A760038D96B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* Tests.swift */; };
+		ED83F68F20348A760038D96B /* GitDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* GitDiffTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56F8B217C4A92A61D0096E63 /* Pods-GitDiff_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitDiff_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GitDiff_Tests/Pods-GitDiff_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5D2403C8869C3DF297B18B00 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6B2AD7B19CF9B81BB10950F5 /* GitDiff.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GitDiff.podspec; path = ../GitDiff.podspec; sourceTree = "<group>"; };
+		5D2403C8869C3DF297B18B00 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6B2AD7B19CF9B81BB10950F5 /* GitDiff.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GitDiff.podspec; path = ../GitDiff.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9BB2F983C46BCB65AE7BB0C6 /* Pods_GitDiff_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitDiff_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F68A20348A760038D96B /* GitDiff_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitDiff_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED83F68E20348A760038D96B /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		ED83F68E20348A760038D96B /* GitDiffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDiffTests.swift; sourceTree = "<group>"; };
 		ED83F69020348A760038D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F03CC31A3D701AA382504E46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F03CC31A3D701AA382504E46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FD2DD0B2B66149DE5A48D21F /* Pods-GitDiff_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitDiff_Tests.release.xcconfig"; path = "Target Support Files/Pods-GitDiff_Tests/Pods-GitDiff_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,6 @@
 				56F8B217C4A92A61D0096E63 /* Pods-GitDiff_Tests.debug.xcconfig */,
 				FD2DD0B2B66149DE5A48D21F /* Pods-GitDiff_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,7 +74,7 @@
 		ED83F68D20348A760038D96B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				ED83F68E20348A760038D96B /* Tests.swift */,
+				ED83F68E20348A760038D96B /* GitDiffTests.swift */,
 				ED83F69020348A760038D96B /* Info.plist */,
 			);
 			path = Tests;
@@ -123,13 +122,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					ED83F67720348A760038D96B = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
 					ED83F68920348A760038D96B = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 						TestTargetID = ED83F67720348A760038D96B;
 					};
 				};
@@ -214,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED83F68F20348A760038D96B /* Tests.swift in Sources */,
+				ED83F68F20348A760038D96B /* GitDiffTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,13 +328,15 @@
 			baseConfigurationReference = 56F8B217C4A92A61D0096E63 /* Pods-GitDiff_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.GitDiff-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "";
 			};
 			name = Debug;
@@ -348,13 +346,15 @@
 			baseConfigurationReference = FD2DD0B2B66149DE5A48D21F /* Pods-GitDiff_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.GitDiff-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "";
 			};
 			name = Release;

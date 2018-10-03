@@ -1,0 +1,6 @@
+framework module GitDiff {
+  umbrella header "GitDiff-umbrella.h"
+
+  export *
+  module * { export * }
+}
