@@ -38,5 +38,5 @@ A git diff parser written in Swift.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'Cocoa'
+  s.frameworks = 'Foundation'
 end

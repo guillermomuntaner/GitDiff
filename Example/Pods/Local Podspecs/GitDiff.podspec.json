@@ -19,5 +19,6 @@
     "ios": "8.0",
     "osx": "10.10"
   },
-  "source_files": "GitDiff/Classes/**/*"
+  "source_files": "GitDiff/Classes/**/*",
+  "frameworks": "Foundation"
 }
