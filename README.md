@@ -16,7 +16,7 @@ Parse git unified diffs with Swift.
 ## Requirements
 
 - iOS 8.0+ / macOS 10.10+
-- Swift 3.1+
+- The framework is build with Swift 4.2.  According to [Swift Version Compatibility](https://docs.swift.org/swift-book/GuidedTour/Compatibility.html) requires Swift 3+
 
 ## Installation
 

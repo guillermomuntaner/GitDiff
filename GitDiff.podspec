@@ -2,9 +2,6 @@ Pod::Spec.new do |s|
   s.name             = 'GitDiff'
   s.version          = '0.1.0'
   s.summary          = 'Parse git unified diffs with Swift.'
-  s.description      = <<-DESC
-Parse git unified diffs with Swift.
-                       DESC
   s.homepage         = 'https://github.com/guillermomuntaner/GitDiff'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Guillermo Muntaner' => 'guillermomp87@gmail.com' }
