@@ -11,10 +11,14 @@ internal class GitDiffParser {
     
     /// Regex for parsing git diffs.
     ///
-    /// - Group 0:
-    ///
+    /// - Group 1: The header old file line start.
+    /// - Group 2: The header old file line span
+    /// - Group 3: The header new file line start.
+    /// - Group 4: The header new file line span.
+    /// - Group 5: The change delta, either "+", "-" or " ".
+    /// - Group 6: The line itself.
     let regex = try! NSRegularExpression(
-        pattern: "^(?:(?:@@ -(\\d+),(\\d+) \\+(\\d+),(\\d+) @@)|([-+\\s])(.*))",
+        pattern: "^(?:(?:@@ -(\\d+),?(\\d+)? \\+(\\d+),?(\\d+)? @@)|([-+\\s])(.*))",
         options: [])
     
     let unifiedDiff: String
@@ -45,9 +49,10 @@ internal class GitDiffParser {
             if let match = self.regex.firstMatch(in: line, options: [], range: NSMakeRange(0, line.utf16.count)) {
                 
                 if let oldLineStartString = match.group(1, in: line), let oldLineStart = Int(oldLineStartString),
-                    let oldLineSpanString = match.group(2, in: line), let oldLineSpan = Int(oldLineSpanString),
-                    let newLineStartString = match.group(3, in: line), let newLineStart = Int(newLineStartString),
-                    let newLineSpanString = match.group(4, in: line), let newLineSpan = Int(newLineSpanString) {
+                    let newLineStartString = match.group(3, in: line), let newLineStart = Int(newLineStartString) {
+                    
+                    let oldLineSpan = match.group(2, in: line).flatMap { oldLineSpanString in Int(oldLineSpanString) } ?? 0
+                    let newLineSpan = match.group(4, in: line).flatMap { newLineSpanString in Int(newLineSpanString) } ?? 0
                     
                     if let currentHunk = currentHunk {
                         hunks.append(currentHunk)
