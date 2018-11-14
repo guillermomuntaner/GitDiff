@@ -51,10 +51,6 @@ internal class GitDiffParser {
                 if let oldLineStartString = match.group(1, in: line), let oldLineStart = Int(oldLineStartString),
                     let newLineStartString = match.group(3, in: line), let newLineStart = Int(newLineStartString) {
                     
-                    if match.group(2, in: line) == nil || match.group(4, in: line) == nil {
-                        print("Empty span at: \(addedFile) -> \(removedFile)")
-                    }
-                    
                     // Get the line spans. If not present default to 1.
                     let oldLineSpan = match.group(2, in: line).flatMap { oldLineSpanString in Int(oldLineSpanString) } ?? 1
                     let newLineSpan = match.group(4, in: line).flatMap { newLineSpanString in Int(newLineSpanString) } ?? 1
